@@ -1,0 +1,14 @@
+
+
+trigger:none
+
+
+pool:
+name jitubhaiagent
+  
+
+steps:
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+
