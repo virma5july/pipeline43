@@ -1,24 +1,19 @@
+trigger: none
 
+pool:jitubhaiagent
 
-trigger:none
-
-pool:
-name:jitubhaiagent
-  
 
 steps:
-- task: TerraformInstaller@1
+-task: TerraformInstaller@1
   inputs:
     terraformVersion: 'latest'
-task 
- task: TerraformTask@5
+
+- task: TerraformTask@5
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)\normalcode'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/normalcode'
     backendServiceArm: 'Virma1994'
     backendAzureRmStorageAccountName: 'shivastgaccount2'
     backendAzureRmContainerName: 'shiva2'
-    backendAzureRmKey: 'shiv2'
-
-
+    backendAzureRmKey: 'virma'
